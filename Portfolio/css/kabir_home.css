@@ -1,0 +1,1036 @@
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 12px 0;
+    color: #444;
+}
+
+.content-block {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    border: 1px solid #eaeaea;
+}
+
+.nav-container .logo h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 0;
+}
+
+.nav-link {
+    color: #555;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    background-color: transparent;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-section {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: floatBackground 15s infinite linear;
+}
+
+@keyframes floatBackground {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(2%, 2%) rotate(90deg); }
+    50% { transform: translate(5%, 0) rotate(180deg); }
+    75% { transform: translate(2%, -2%) rotate(270deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+.profile-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    z-index: 2;
+}
+
+.profile-image::after {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    animation: pulseRing 3s infinite ease-in-out;
+    z-index: -1;
+}
+
+@keyframes pulseRing {
+    0%, 100% { 
+        transform: scale(1); 
+        opacity: 0.5; 
+    }
+    50% { 
+        transform: scale(1.05); 
+        opacity: 0.8; 
+    }
+}
+
+@media (hover: hover) {
+    .profile-image:hover {
+        transform: scale(1.05);
+        border-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 
+            0 30px 80px rgba(0, 0, 0, 0.6),
+            0 15px 40px rgba(0, 0, 0, 0.4),
+            inset 0 0 30px rgba(255, 255, 255, 0.3);
+    }
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-info h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.student-id {
+    font-size: 18px;
+    opacity: 0.95;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.student-id i {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.academic-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.95;
+}
+
+.academic-title i {
+    font-size: 22px;
+}
+
+.contact-info {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+}
+
+.contact-info a:hover {
+    color: #e0e0ff;
+    text-decoration: underline;
+    transform: translateX(5px);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+.contact-item i {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-container > section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.main-container > section:nth-child(2) { animation-delay: 0.1s; }
+.main-container > section:nth-child(3) { animation-delay: 0.2s; }
+.main-container > section:nth-child(4) { animation-delay: 0.3s; }
+
+.interests-container {
+    background: linear-gradient(145deg, #ffffff, #f9f9f9);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+    box-shadow: 
+        0 15px 35px rgba(0, 0, 0, 0.08),
+        0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.interests-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3498db, #2ecc71);
+}
+
+.interests-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.interests-list li {
+    padding: 20px 20px 20px 55px;
+    background: white;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.interests-list li::before {
+    content: "✨";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #3498db;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.interests-list li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3498db, #2ecc71);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.interests-list li:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: rgba(52, 152, 219, 0.3);
+    box-shadow: 
+        0 10px 25px rgba(52, 152, 219, 0.15),
+        0 5px 15px rgba(52, 152, 219, 0.1);
+}
+
+.interests-list li:hover::before {
+    transform: translateY(-50%) scale(1.2) rotate(15deg);
+    color: #2ecc71;
+}
+
+.interests-list li:hover::after {
+    opacity: 1;
+}
+
+.hobbies-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hobbies-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #3498db, #2ecc71, #9b59b6);
+    border-radius: 5px 5px 0 0;
+}
+
+.hobbies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.hobby-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    background: linear-gradient(145deg, #ffffff, #f5f7fa);
+    border-radius: 15px;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.06),
+        0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.hobby-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hobby-item:hover::before {
+    opacity: 1;
+}
+
+.hobby-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    border-color: rgba(52, 152, 219, 0.3);
+    box-shadow: 
+        0 20px 40px rgba(52, 152, 219, 0.2),
+        0 10px 20px rgba(52, 152, 219, 0.15),
+        inset 0 0 20px rgba(52, 152, 219, 0.05);
+}
+
+.hobby-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.hobby-icon::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    opacity: 0.3;
+    z-index: -1;
+    animation: pulseIcon 2s infinite ease-in-out;
+}
+
+@keyframes pulseIcon {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+}
+
+.hobby-item:hover .hobby-icon {
+    transform: scale(1.1) rotate(10deg);
+    background: linear-gradient(135deg, #2ecc71, #3498db);
+}
+
+.hobby-icon i {
+    font-size: 28px;
+    color: white;
+}
+
+.hobby-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.hobby-item:hover .hobby-name {
+    color: #3498db;
+    transform: scale(1.05);
+}
+
+.hobby-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 8px;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+.social-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 100%);
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-section h2 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.social-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 2px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 35px;
+    background: linear-gradient(145deg, #ffffff, #f5f7fa);
+    border-radius: 15px;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.08),
+        0 6px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
+    min-width: 200px;
+    justify-content: center;
+}
+
+.social-link:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 15px 25px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.social-link:hover i {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.social-link[href*="linkedin"]:hover {
+    background: linear-gradient(135deg, #0077B5, #00A0DC);
+}
+
+.social-link[href*="github"]:hover {
+    background: linear-gradient(135deg, #333, #666);
+}
+
+.social-link[href*="facebook"]:hover {
+    background: linear-gradient(135deg, #4267B2, #5890FF);
+}
+
+.social-link[href*="twitter"]:hover {
+    background: linear-gradient(135deg, #1DA1F2, #1A91DA);
+}
+
+.social-link[href*="mailto"]:hover {
+    background: linear-gradient(135deg, #EA4335, #D14836);
+}
+
+.social-link.professional:hover {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+.footer-content p {
+    color: rgba(255,255,255,0.8);
+    margin: 0 0;
+    font-size: 10px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+    .profile-header {
+        gap: 30px;
+    }
+    
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .profile-info h1 {
+        font-size: 32px;
+    }
+    
+    .academic-title {
+        font-size: 18px;
+    }
+    
+    .main-container {
+        padding: 30px 15px;
+    }
+    
+    .interests-container,
+    .hobbies-section,
+    .social-section {
+        padding: 30px;
+    }
+    
+    .interests-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 12px;
+    }
+    
+    .hobbies-container {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 20px;
+    }
+    
+    .social-link {
+        padding: 16px 30px;
+        min-width: 180px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .profile-section {
+        padding: 30px 15px;
+        min-height: auto;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        border-width: 6px;
+    }
+    
+    .profile-info h1 {
+        font-size: 28px;
+    }
+    
+    .student-id,
+    .academic-title {
+        justify-content: center;
+    }
+    
+    .contact-info {
+        padding: 15px;
+        margin-top: 20px;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+    
+    .main-container {
+        padding: 20px 10px;
+    }
+    
+    .interests-container,
+    .hobbies-section,
+    .social-section {
+        padding: 25px;
+        margin: 30px 0;
+        border-radius: 15px;
+    }
+    
+    .interests-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .hobbies-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .social-link {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-section {
+        padding: 25px 10px;
+    }
+    
+    .profile-header {
+        gap: 20px;
+    }
+    
+    .profile-image {
+        width: 180px;
+        height: 180px;
+        border-width: 5px;
+    }
+    
+    .profile-info h1 {
+        font-size: 24px;
+    }
+    
+    .student-id {
+        font-size: 15px;
+    }
+    
+    .academic-title {
+        font-size: 16px;
+    }
+    
+    .contact-info {
+        padding: 12px;
+    }
+    
+    .contact-item {
+        font-size: 14px;
+    }
+    
+    .main-container {
+        padding: 15px 5px;
+    }
+    
+    .interests-container,
+    .hobbies-section,
+    .social-section {
+        padding: 20px 15px;
+        margin: 20px 0;
+        border-radius: 12px;
+    }
+    
+    .hobbies-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .hobby-description {
+        display: none;
+    }
+    
+    .social-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .social-link {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 320px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .profile-info h1 {
+        font-size: 22px;
+    }
+    
+    .student-id {
+        font-size: 14px;
+    }
+    
+    .academic-title {
+        font-size: 15px;
+    }
+    
+    .contact-item {
+        font-size: 13px;
+    }
+    
+    .hobbies-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .profile-section {
+        min-height: 300px;
+        padding: 20px;
+    }
+    
+    .profile-header {
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile-info h1 {
+        font-size: 22px;
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .social-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .social-link {
+        width: auto;
+        min-width: 150px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .profile-header {
+        max-width: 1400px;
+    }
+    
+    .profile-image {
+        width: 300px;
+        height: 300px;
+        border-width: 10px;
+    }
+    
+    .profile-info h1 {
+        font-size: 42px;
+    }
+    
+    .student-id {
+        font-size: 22px;
+    }
+    
+    .academic-title {
+        font-size: 24px;
+    }
+    
+    .main-container {
+        max-width: 1400px;
+        padding: 60px 40px;
+    }
+    
+    .interests-list {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 20px;
+    }
+    
+    .hobbies-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 30px;
+    }
+    
+    .social-section {
+        max-width: 1400px;
+        padding: 80px 40px;
+    }
+    
+    .social-section h2 {
+        font-size: 3rem;
+    }
+    
+    .social-link {
+        padding: 22px 45px;
+        font-size: 1.2rem;
+        min-width: 250px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .profile-section {
+        background: linear-gradient(135deg, #4a00e0 0%, #8e2de2 100%);
+    }
+    
+    .contact-info {
+        background: rgba(0, 0, 0, 0.3);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .interests-container {
+        background: linear-gradient(145deg, #1a1a2e, #16213e);
+        border-color: rgba(52, 152, 219, 0.2);
+    }
+    
+    .interests-list li {
+        background: #2c3e50;
+        color: #ecf0f1;
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .hobbies-section {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        border-color: rgba(52, 152, 219, 0.2);
+    }
+    
+    .hobby-item {
+        background: linear-gradient(145deg, #2c3e50, #34495e);
+        border-color: rgba(255, 255, 255, 0.1);
+        color: #ecf0f1;
+    }
+    
+    .hobby-name {
+        color: #ecf0f1;
+    }
+    
+    .social-section {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+    
+    .social-section h2 {
+        color: #ecf0f1;
+    }
+    
+    .social-link {
+        background: linear-gradient(145deg, #2c3e50, #34495e);
+        color: #ecf0f1;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .profile-section::before,
+    .profile-image::after,
+    .hobby-icon::after {
+        animation: none;
+    }
+    
+    .main-container > section,
+    .interests-list li,
+    .hobby-item,
+    .social-link {
+        animation: none;
+        transition: none;
+    }
+    
+    .profile-image:hover,
+    .interests-list li:hover,
+    .hobby-item:hover,
+    .social-link:hover,
+    .contact-info a:hover {
+        transform: none;
+    }
+}
+
+@media print {
+    .profile-section {
+        background: none;
+        color: black;
+        padding: 20px 0;
+        min-height: auto;
+    }
+    
+    .profile-section::before {
+        display: none;
+    }
+    
+    .profile-image {
+        border: 2px solid #ccc;
+        box-shadow: none;
+        filter: grayscale(100%);
+    }
+    
+    .profile-image::after {
+        display: none;
+    }
+    
+    .contact-info {
+        background: #f0f0f0;
+        border: 1px solid #ddd;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+    
+    .contact-info a {
+        color: #0066cc;
+    }
+}

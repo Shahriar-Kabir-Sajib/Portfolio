@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+
+    <link rel="stylesheet" href="/css/kabir_home.css">
+
+    <!-- Internal CSS -->
+    <style>
+        #personal-bio {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #333;
+            text-align: justify;
+        }
+
+        section h2 {
+            color: #2c3e50;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+            margin: 30px 0 20px 0;
+            font-size: 24px;
+        }
+
+        .about-me .content-block p {
+            margin-bottom: 15px;
+            text-indent: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .professional-info {
+                grid-template-columns: 1fr;
+            }
+
+            section h2 {
+                font-size: 20px;
+            }
+
+            #personal-bio {
+                font-size: 15px;
+            }
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1 style="
+        font-weight: 800;
+        font-size: 28px;
+        background: linear-gradient(
+            90deg,
+            #dbdb34 0%,
+            #141515 25%,
+            #6c6160 50%,
+            #73d5f5 75%,
+            #3498db 100%
+        );
+        background-size: 400% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: gradientFlow 8s ease infinite;
+        padding: 5px 0;
+    ">
+                        <i class="fas fa-graduation-cap" style="margin-right: 12px;"></i>
+                        Homepage
+                    </h1>
+                </div>
+                <div class="links">
+                    <a href="kabir_home.html" class="nav-link active">Home</a>
+                    <a href="kabir_career.html" class="nav-link">Career Skills</a>
+                    <a href="mailto:mdshahriarkabirsajib@gmail.com" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <section class="profile-section">
+            <div class="profile-header">
+                <img src="/images/kabir.png" alt="Md Shahriar Kabir Sajib" class="profile-image">
+                <div class="profile-info">
+                    <h1>Md Shahriar Kabir Sajib</h1>
+                    <h3 class="student-id">Student ID: SL25225005</h3>
+                    <p class="academic-title">Masters in Software Engineering</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="about-me content-block">
+            <h2>Personal Introduction</h2>
+            <div id="personal-bio">
+                <p>Having cultivated a strong interest in artificial intelligence models, I am currently pursuing a
+                    degree in Software Engineering at
+                    Zhengzhou University. My academic journey has equipped me with proficiency in programming languages
+                    such as Python and
+                    Java, alongside valuable practical experience through internships and project work. I am deeply
+                    committed to adopting
+                    technology to solve real-world challenges and aspire to contribute to innovative projects within a
+                    dynamic environment. My
+                    ultimate goal is to develop into a skilled software developer, continuously advancing my knowledge
+                    and expertise in the field of
+                    technology.</p>
+
+                <p>Born and raised in Bangladesh, I developed an early interest in computers which evolved into a
+                    pursuit of excellence in the field of technology. My approach combines technical proficiency with
+                    creative problem-solving.</p>
+
+                <h3 style="color: #2980b9; margin-top: 25px;">Academic Interests</h3>
+                <ul class="interests-list">
+                    <li>Web Development & User Experience Design</li>
+                    <li>Artificial Intelligence & Machine Learning</li>
+                    <li>Database Management Systems</li>
+                    <li>Software Engineering Principles</li>
+                </ul>
+
+                <h3 style="color: #2980b9; margin-top: 25px;">Hobbies & Extracurricular Activities</h3>
+                <div class="hobbies-container">
+                    <div class="hobby-item">
+                        <i class="fas fa-code"></i>
+                        <span>Programming Projects</span>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fas fa-book"></i>
+                        <span>Technical Reading</span>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fas fa-chess"></i>
+                        <span>Strategic Games</span>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fas fa-music"></i>
+                        <span>Music Composition</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-section">
+            <h2>Connect With Me</h2>
+            <div class="social-links">
+                <a href="http://linkedin.com/in/shahriar-kabir-sajib-abb194217" class="social-link professional">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Shahriar-Kabir-Sajib" class="social-link professional">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.researchgate.net/profile/Md-Shahriar-Sajib?ev=hdr_xprf"
+                    class="social-link professional">
+                    <span>Researchgate</span>
+                </a>
+                <a href="https://www.facebook.com/shahriar.kabir.7792" class="social-link professional">
+                    <span>Facebook</span>
+                </a>
+                <a href="mailto:shasajib10@mail.ustc.edu.cn" class="social-link professional">
+                    <i class="fas fa-envelope"></i>
+                    <span>Academic Email</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Md Shahriar Kabir Sajib. All Rights Reserved.</p>
+            <p>This website is part of academic coursework, named Harmony OS. Last updated: December 2025</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Skills</title>
+
+    <link rel="stylesheet" href="/css/kabir_career.css">
+
+    <!-- Internal CSS -->
+    <style>
+        #personal-bio {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #333;
+            text-align: justify;
+        }
+
+        section h2 {
+            color: #2c3e50;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+            margin: 30px 0 20px 0;
+            font-size: 24px;
+        }
+
+        .about-me .content-block p {
+            margin-bottom: 15px;
+            text-indent: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+                margin: 0 auto 20px;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .professional-info {
+                grid-template-columns: 1fr;
+            }
+
+            section h2 {
+                font-size: 20px;
+            }
+
+            #personal-bio {
+                font-size: 15px;
+            }
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1 style="
+        font-weight: 800;
+        font-size: 28px;
+        background: linear-gradient(
+            90deg,
+            #dbdb34 0%,
+            #141515 25%,
+            #6c6160 50%,
+            #73d5f5 75%,
+            #3498db 100%
+        );
+        background-size: 400% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: gradientFlow 8s ease infinite;
+        padding: 5px 0;
+    ">
+                        <i class="fas fa-graduation-cap" style="margin-right: 12px;"></i>
+                        Career Skills
+                    </h1>
+                </div>
+                <div class="links">
+                    <a href="kabir_home.html" class="nav-link">Home</a>
+                    <a href="kabir_career.html" class="nav-link active">Career Skills</a>
+                    <a href="mailto:mdshahriarkabirsajib@gmail.com" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="career-plan content-block" id="career-plan">
+        <h2>Career Skill Development Plan</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">2025</div>
+                <div class="timeline-content">
+                    <h4>Advanced Specialization & Thesis Completion</h4>
+                    <p>Complete and publish thesis: "Body Language Analysis System based on Motion and Gesture
+                        Recognition"</p>
+                    <p>Deepen expertise in AI/ML (TensorFlow, NLP) and DevOps integration</p>
+                    <p>Strengthen full-stack capabilities (Node.js, JavaScript, Python, Java)</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-content">
+                    <h4>Professional Launch & Certification</h4>
+                    <p>Secure a graduate role or internship as a Software Engineer, AI Developer, or DevOps Engineer</p>
+                    <p>Obtain professional certifications</p>
+                    <p>Contribute to open-source projects and expand GitHub portfolio</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2027</div>
+                <div class="timeline-content">
+                    <h4>Industry Impact & Leadership</h4>
+                    <p>Lead or significantly contribute to a large-scale software/AI project</p>
+                    <p>Present at a tech conference or publish a technical paper</p>
+                    <p>Mentor junior developers and strengthen project management skills</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="professional-info">
+    <div class="info-card">
+        <i class="fas fa-university"></i>
+        <h3>Education</h3>
+        <p>B.Sc. in Software Engineering</p>
+        <p>Zhengzhou University</p>
+        <p>Graduated: July 2025</p>
+        <p>GPA: 3.75 / 4.0</p>
+    </div>
+    <div class="info-card">
+        <i class="fas fa-tools"></i>
+        <h3>Core Technical Skills</h3>
+        <p><strong>Languages:</strong> Python, Java, C, C++, JavaScript</p>
+        <p><strong>Web & Frameworks:</strong> Node.js, HTML/CSS, JSP</p>
+        <p><strong>AI/ML & Data:</strong> TensorFlow, Qiskit, NumPy, Pandas</p>
+        <p><strong>Specialization:</strong> NLP, Motion Recognition, DevOps with AI/ML</p>
+    </div>
+    <div class="info-card">
+        <i class="fas fa-award"></i>
+        <h3>Achievements & Recognition</h3>
+        <p>Outstanding International Student (2022-2023, 2023-2024)</p>
+        <p>Published Researcher (NAAR, Forum for Economic Studies)</p>
+        <p>Vice Director, Academic Dept. (Int'l Student Assoc.)</p>
+    </div>
+</section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Md Shahriar Kabir Sajib. All Rights Reserved.</p>
+            <p>This website is part of academic coursework, named Harmony OS. Last updated: December 2025</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

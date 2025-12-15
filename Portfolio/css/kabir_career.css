@@ -1,0 +1,458 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 12px 0;
+    color: #444;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container .logo h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #555;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.nav-link:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    background-color: transparent;
+}
+
+.content-block {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    border: 1px solid #eaeaea;
+    transition: all 0.3s ease;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    margin: 30px 0;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #3498db;
+    transition: all 0.3s ease;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.timeline-year {
+    position: absolute;
+    left: -5px;
+    top: 0;
+    background-color: #3498db;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.timeline-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.professional-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+    transition: all 0.3s ease;
+}
+
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.info-card i {
+    font-size: 40px;
+    color: #3498db;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    color: rgba(255,255,255,0.8);
+    margin: 0 0;
+    font-size: 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+    white-space: nowrap;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+    .main-container {
+        padding: 30px 15px;
+    }
+    
+    .content-block {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .professional-info {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .main-container {
+        padding: 20px 10px;
+    }
+    
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline:before {
+        left: 10px;
+    }
+    
+    .timeline-year {
+        position: relative;
+        left: 0;
+        display: inline-block;
+        margin-bottom: 15px;
+        top: 0;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+        margin-left: 0;
+    }
+    
+    .professional-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-links a {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        padding: 15px;
+    }
+    
+    .nav-container .logo h1 {
+        font-size: 20px;
+    }
+    
+    .nav-link {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    
+    .main-container {
+        padding: 20px 10px;
+    }
+    
+    .content-block {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+    }
+    
+    .timeline {
+        padding-left: 15px;
+        margin: 20px 0;
+    }
+    
+    .timeline:before {
+        left: 8px;
+    }
+    
+    .timeline-item {
+        margin-bottom: 25px;
+    }
+    
+    .timeline-year {
+        padding: 4px 12px;
+        font-size: 13px;
+    }
+    
+    .timeline-content {
+        padding: 15px 12px;
+        border-radius: 6px;
+    }
+    
+    .info-card {
+        padding: 20px 15px;
+    }
+    
+    .info-card i {
+        font-size: 35px;
+        margin-bottom: 12px;
+    }
+    
+    p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    
+    footer {
+        padding: 30px 15px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .nav-container .logo h1 {
+        font-size: 18px;
+    }
+    
+    .nav-link {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    
+    .main-container {
+        padding: 15px 8px;
+    }
+    
+    .content-block {
+        padding: 12px;
+    }
+    
+    .timeline {
+        padding-left: 12px;
+    }
+    
+    .timeline-year {
+        font-size: 12px;
+        padding: 3px 10px;
+    }
+    
+    .info-card {
+        padding: 15px 10px;
+    }
+    
+    .info-card i {
+        font-size: 30px;
+    }
+    
+    p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .nav-container {
+        position: relative;
+        padding: 10px 20px;
+    }
+    
+    .links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-height: 60vh;
+        overflow-y: auto;
+        margin-top: 10px;
+    }
+    
+    .main-container {
+        padding: 20px 15px;
+    }
+    
+    .professional-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .timeline-item {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .main-container {
+        max-width: 1400px;
+        padding: 60px 40px;
+    }
+    
+    .content-block {
+        padding: 35px;
+        margin-bottom: 40px;
+    }
+    
+    .professional-info {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    
+    .info-card {
+        padding: 35px 25px;
+    }
+    
+    .info-card i {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-content,
+    .content-block,
+    .info-card {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .timeline:before {
+        width: 1.5px;
+    }
+    
+    .nav-link.active {
+        border-bottom-width: 1.5px;
+    }
+}
